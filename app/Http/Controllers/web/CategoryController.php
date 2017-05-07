@@ -37,7 +37,43 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Get all the request field data
+        $fields = $request->all();
+
+        $user_id = 0;
+
+        //Add the current user id to the request field list 
+        if(\Auth::check()) {
+            $user_id = \Auth::user()->id;
+        }
+
+         $level1 = [
+        'name' => $fields['level1'],
+        'level' => 1,
+        'parent_id' => 1,
+        'order_index' => 1,
+        'updated_by' => $user_id
+        ];
+
+        $level2s = $fields['level2s'];
+
+        //Ceate the company 
+        $category = Category::create($level1);
+
+        foreach ($level2s as $key => $level2) {
+            $level2 = [
+            'name' => $fields['level1'],
+            'level' => 2,
+            'parent_id' => $category->id,
+            'order_index' => $key,
+            'updated_by' => $user_id
+            ];
+
+            Category::create($level2);
+        }
+
+
+        return view('admin.categories.create')->with('success_message', 'Category Created'); 
     }
 
     /**

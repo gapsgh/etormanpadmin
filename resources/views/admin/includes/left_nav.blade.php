@@ -29,6 +29,24 @@
        
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-column"></i> Categories</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="css-typography.html">View All</a>
+                            </li>                                        
+                            <li class="{{Request::path() == 'categories/create' ? 'active' : ''}}"><a href="css-icons.html">Add New</a>
+                            </li>
+                            <li><a href="css-shadow.html">Modify</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+        </li>
+
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> CSS</a>
                     <div class="collapsible-body">
                         <ul>
@@ -48,6 +66,8 @@
                 
             </ul>
         </li>
+
+
         
     </ul>
     <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only darken-2"><i class="mdi-navigation-menu" ></i></a>

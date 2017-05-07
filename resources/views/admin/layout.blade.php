@@ -34,7 +34,7 @@
             <section id="content">
 
                 <!--start container-->
-                <div class="container" >
+                <div class="container"  style="min-height: 500px;">
                     @yield('content')
                 </div>
                 <!--end container-->

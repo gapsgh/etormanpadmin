@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->integer('parent_id')->unsigned();
             $table->foreign('parent_id')->references('id')->on('categories');
             $table->integer('order_index');
+            $table->integer('updated_by');
             $table->timestamps();
         });
     }

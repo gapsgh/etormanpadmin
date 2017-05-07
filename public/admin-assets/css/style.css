@@ -1413,9 +1413,9 @@ tr.group:hover {
 
 footer.page-footer {
   padding-top: 0px;
-  position: absolute;
+  /*position: absolute;*/
   right: 0;
-  bottom: 0;
+  /*bottom: 0;*/
   left: 0;
 }
 /*----------------------------------------

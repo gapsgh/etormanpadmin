@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-            $table->string('single_price');
-            $table->integer('bulk_price');
-            $table->integer('bonus_percentage_single');
-            $table->integer('bonus_percentage_bulk');
+            $table->float('single_price');
+            $table->float('bulk_price');
+            $table->float('bonus_percentage_single');
+            $table->float('bonus_percentage_bulk');
             $table->integer('active_status')->default('1');
             $table->integer('approval_status')->default('0');
             $table->integer('category_id')->unsigned();

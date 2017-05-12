@@ -22,7 +22,8 @@ class Phone_NumberTableSeeder extends Seeder
         	# code...
         	$phone_numbers[] = [
         		'number' => $faker->phoneNumber(),
-        		'priority' => 1,
+                'priority' => 1,
+        		'on_whatsapp' => 1,
         		'company_id' => rand(1,20),
         		'created_at' => new DateTime,
         		'updated_at' => new DateTime,

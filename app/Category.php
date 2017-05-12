@@ -12,6 +12,7 @@ class Category extends Model
         'level',
         'parent_id',
         'order_index',
+        'image',
         'updated_by'
     ];
 

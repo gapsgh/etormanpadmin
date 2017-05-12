@@ -18,4 +18,5 @@
     <link href="{{asset('/admin-assets/js/plugins/jvectormap/jquery-jvectormap.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{{asset('/admin-assets/js/plugins/chartist-js/chartist.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
 
+    <link href="{{asset('/admin-assets/css/fileinput.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{{asset('/admin-assets/css/my.css')}}" type="text/css" rel="stylesheet" media="screen,projection">

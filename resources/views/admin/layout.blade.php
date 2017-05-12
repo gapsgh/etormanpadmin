@@ -86,15 +86,26 @@
     <script type="text/javascript" src="{{asset('/admin-assets/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
     <script type="text/javascript" src="{{asset('/admin-assets/js/plugins/jvectormap/vectormap-script.js')}}"></script>
     
+    <script src="{{asset('/admin-assets/js/fileinput.min.js')}}"></script>
     
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     {{-- <script type="text/javascript" src="{{asset('/admin-assets/js/plugins.js')}}"></script> --}}
     <!-- Toast Notification -->
     <script type="text/javascript">
-    
+        function initialize_image_input(input_id) {
 
+        $("#"+input_id).fileinput({
+            'showUpload':false,
+            'maxFileSize':2000,
+            'allowedFileTypes':['image'],
+            'allowedFileExtensions':['jpg', 'png'],
+            'allowedPreviewTypes':['image'],
+            'previewFileType':'image'
+        });
+    }
     </script>
-    @yield('scripts')
+
+@yield('scripts')
 </body>
 
 </html>

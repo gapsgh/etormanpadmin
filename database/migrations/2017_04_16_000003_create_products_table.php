@@ -25,10 +25,10 @@ class CreateProductsTable extends Migration
             $table->integer('approval_status')->default('0');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->integer('company_id')->unsigned();
-            $table->foreign('company_id')->references('id')->on('companies');
             $table->integer('certification_status')->default('0');
             $table->integer('premiun_status')->default('0');
+            $table->integer('location_city')->unsigned();
+            $table->foreign('location_city')->references('id')->on('locations');
             $table->timestamps();
         });
     }

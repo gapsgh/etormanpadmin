@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->string('code')->unique();
             $table->float('single_price');
             $table->float('bulk_price');
             $table->float('bonus_percentage_single');
@@ -25,6 +26,8 @@ class CreateProductsTable extends Migration
             $table->integer('approval_status')->default('0');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->integer('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('companies');
             $table->integer('certification_status')->default('0');
             $table->integer('premiun_status')->default('0');
             $table->integer('location_city')->unsigned();

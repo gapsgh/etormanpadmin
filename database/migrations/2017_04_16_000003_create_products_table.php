@@ -16,12 +16,12 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->string('code')->unique();
-            $table->float('single_price');
-            $table->float('bulk_price');
-            $table->float('bonus_percentage_single');
-            $table->float('bonus_percentage_bulk');
+            $table->double('single_price');
+            $table->double('bulk_price');
+            $table->double('bonus_percentage_single');
+            $table->double('bonus_percentage_bulk');
             $table->integer('active_status')->default('1');
             $table->integer('approval_status')->default('0');
             $table->integer('category_id')->unsigned();

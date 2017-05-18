@@ -11,6 +11,7 @@ class Company extends Model
         'name',
         'registration_number',
         'address',
+        'account_type',
         'user_id',
         'logo',
         'working_hours',
